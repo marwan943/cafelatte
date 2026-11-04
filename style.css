@@ -1,0 +1,55 @@
+:root {
+  --coffee-dark: #231612;
+  --coffee: #6f4e37;
+  --caramel: #c68b59;
+  --cream: #f5ebe0;
+  --cream-light: #fbf7f1;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 95px; }
+body {
+  margin: 0; background: var(--cream); color: var(--coffee-dark);
+  font-family: "Cairo", sans-serif; line-height: 1.8;
+}
+h1,h2,h3,.display-1,.display-3 { font-family: "Amiri", serif; font-weight: 700; }
+section { position: relative; }
+#cafe-hero {
+  min-height: 620px; display: flex; align-items: center;
+  background-position: center; background-size: cover; color: white;
+}
+#cafe-hero .container { position: relative; z-index: 1; }
+#cafe-hero h1 { font-size: clamp(2.8rem, 7vw, 5.4rem); }
+#cafe-hero p { color: rgba(255,255,255,.86) !important; }
+#menu-nav {
+  top: 0; z-index: 20; background: rgba(251,247,241,.96);
+  backdrop-filter: blur(12px); border-bottom: 1px solid rgba(111,78,55,.14);
+}
+#menu-nav .btn { border-radius: 999px; font-size: .9rem; }
+.btn-primary { background: var(--coffee); border-color: var(--coffee); }
+.btn-primary:hover { background: var(--coffee-dark); border-color: var(--coffee-dark); }
+.btn-outline-primary { color: var(--coffee); border-color: var(--coffee); }
+.btn-outline-primary:hover { background: var(--coffee); border-color: var(--coffee); }
+section:not(#cafe-hero) { padding-top: 4.5rem; padding-bottom: 5rem; }
+section h2 { color: var(--coffee-dark); }
+.card {
+  border: 0 !important; border-radius: 1.25rem !important;
+  background: #fffdf9; transition: transform .25s ease, box-shadow .25s ease;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(35,22,18,.12) !important; }
+.card-img-top { height: 220px; object-fit: cover; }
+.card .badge { white-space: nowrap; background: var(--coffee) !important; }
+.badge { font-family: "Cairo", sans-serif; }
+.text-muted { color: #786b63 !important; }
+#refreshments, #cold-coffee { background: #efe1d2; }
+#hot-coffee, #desserts { background: var(--cream-light); }
+#refreshments .card, #cold-coffee .card { background: white; }
+section:last-child { background: var(--coffee-dark); }
+section:last-child h2, section:last-child p { color: white; }
+@media (max-width: 767px) {
+  #cafe-hero { min-height: 540px !important; padding: 5rem 0 !important; }
+  #cafe-hero h1 { font-size: 2.7rem; }
+  section:not(#cafe-hero) { padding-top: 3.2rem; padding-bottom: 3.5rem; }
+  #menu-nav .container { padding-left: 8px; padding-right: 8px; }
+  #menu-nav .btn { font-size: .76rem; padding: .45rem .7rem !important; }
+  .display-3 { font-size: 2.4rem; }
+}
